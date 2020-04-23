@@ -1,0 +1,46 @@
+[1] "#-----------------------Create Training and Test data------------------------------#"
+[1] "trainingRowIndex:"
+[1] 10  7  6  3  1  2 12  4  9
+[1] "Model Training data:"
+   Temperature.Mean.by.Month Ozone.Mean.by.Month
+10                  58.39355          0.02596774
+7                   78.22581          0.05129032
+6                   71.82333          0.04680000
+3                   48.21613          0.03361290
+1                   34.61290          0.02119355
+2                   37.71034          0.02596429
+12                  38.64667          0.01956667
+4                   52.56667          0.03926667
+9                   71.34667          0.03660000
+[1] "Test Data:"
+   Temperature.Mean.by.Month Ozone.Mean.by.Month
+5                   62.29677          0.04022581
+8                   78.68387          0.04503226
+11                  50.00000          0.02152000
+[1] "#-----------Fit the model on training data and predict dist on test data---------#"
+[1] "Model based on Training Data:"
+[1] "lmMod results: "
+
+Call:
+lm(formula = Ozone.Mean.by.Month ~ Temperature.Mean.by.Month, 
+    data = trainingData)
+
+Coefficients:
+              (Intercept)  Temperature.Mean.by.Month  
+                0.0012190                  0.0005885  
+
+[1] "Summary staistics of lmMod: "
+[1] "Predict Ozone:"
+         5          8         11 
+0.03788301 0.04752744 0.03064590 
+[1] "#-----------------------Calculate prediction accuracy and error rates-----------------------------#"
+[1] "Actual vs predictions: "
+[1] "Correlation Accuracy for actual and predictions: "
+             actuals predicteds
+actuals    1.0000000  0.9167015
+predicteds 0.9167015  1.0000000
+[1] "#-----------------------Min Max accuracy and MAPE-----------------------------#"
+[1] "Min-Max Accuracy: "
+[1] 0.8638246
+[1] "MAPE(mean absolute percentage deviation) Calculation: "
+[1] 0.1792385

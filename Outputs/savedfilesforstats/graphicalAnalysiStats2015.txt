@@ -1,0 +1,34 @@
+[1] "#---------------Correlation Analysis---------------------#"
+[1] 0.8023896
+[1] "#----------------Building the Linear Regression Model---------------------#"
+[1] "Linear Regression model: "
+
+Call:
+lm(formula = Ozone.Mean.by.Month ~ Temperature.Mean.by.Month, 
+    data = tempoz)
+
+Coefficients:
+              (Intercept)  Temperature.Mean.by.Month  
+                0.0038436                  0.0004925  
+
+[1] "This is summary statistics of the linear Regression Model: "
+
+Call:
+lm(formula = Ozone.Mean.by.Month ~ Temperature.Mean.by.Month, 
+    data = tempoz)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.013343 -0.002516  0.001707  0.004659  0.007992 
+
+Coefficients:
+                           Estimate Std. Error t value Pr(>|t|)   
+(Intercept)               0.0038436  0.0068295   0.563  0.58597   
+Temperature.Mean.by.Month 0.0004925  0.0001158   4.252  0.00169 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.007043 on 10 degrees of freedom
+Multiple R-squared:  0.6438,	Adjusted R-squared:  0.6082 
+F-statistic: 18.08 on 1 and 10 DF,  p-value: 0.001685
+
